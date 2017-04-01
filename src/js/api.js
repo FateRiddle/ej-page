@@ -1,6 +1,6 @@
 import axios from 'axios'
 
-const url = 'http://localhost:9000'
+const url = 'http://61.164.47.179:3000'
 
 export const fetchUser = () => {
   return axios.get(`${url}/user`).then(res => res.data)
