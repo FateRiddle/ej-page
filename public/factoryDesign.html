@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html>
+<head lang="zh-CN">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <title>工厂设计师</title>
+    <link rel="stylesheet" href="css/reset.css"/>
+    <link rel="stylesheet" href="css/public.css"/>
+    <link rel="stylesheet" href="css/style.css"/>
+</head>
+<style>
+    .experience{
+        width: 100%;
+    }
+    .experience_yellow{
+        width: 100%;
+        height: 10px;
+        background-color: #ffc519 ;
+    }
+    .experience_bg{
+        width: 100%;
+        padding-top: 35px;
+        background: url("images/experience.png") no-repeat 100% 100%;
+        padding-bottom: 35px;
+    }
+    .experience_bg h3{
+        color: white;
+        text-align: center;
+    }
+    .experience_bg p {
+        color: white;
+        text-align: center;
+    }
+    .experience_bg .experience1{
+        width: 17.1875%;
+        border: 1px solid white;
+        display: inline-block;
+        margin-left: 28.125%;
+
+        vertical-align: middle;
+    }
+    .experience_bg .experience_q{
+        padding: 1.5%;
+        display: inline-block;
+        border-radius: 50%;
+        background-color: #ffc519;
+        vertical-align: middle;
+    }
+    .experience_bg .experience2{
+        width: 17.1875%;
+        border: 1px solid white;
+        display: inline-block;
+
+        vertical-align: middle;
+    }
+    .experience #experience_wrap{
+        width: 100%;
+
+    }
+    .experience #experience_wrap li{
+        width: 78.125%;
+        position: absolute;
+        transition: all 1s;
+    }
+    .ty{
+        width: 78.125%;
+        opacity: 0;
+    }
+    .experience #experience_wrap li div{
+        opacity: 0.6;
+        position: absolute;
+        left: 0;
+        top: 0;
+        background-color: black;
+        width: 100%;
+        height: 100%;
+        transition: all 1s;
+    }
+    .experience #experience_wrap li img{
+        width: 100%;
+    }
+    .experience .experience_dz{
+        margin-top: 10px;
+        text-align: center;
+
+    }
+    .experience .experience_img{
+        /*margin-left: 2%;*/
+        width: 3.90625%;
+        display: inline-block;
+        vertical-align: middle;
+    }
+    .experience_bg .span1{
+        color: white;
+        display: inline-block;
+        font-size: 6px;
+        height: 100%;
+        /*vertical-align: middle;*/
+        margin-left: 2.34375%;
+    }
+    .experience_price{
+        width:100%;
+        text-align: center;
+        color:#fff;
+
+    }
+    .experience_price ul{
+        width:90%;
+        display: -webkit-flex;
+        margin:20px auto;
+    }
+    .experience_price p{
+        width:80%;
+        border:1px solid #fff;
+        height:30px;
+        line-height: 30px;
+    }
+    .experience_price ul li{
+        display:inline-block;
+        flex:1;
+        font-size: 14px;
+
+    }
+    .experience_span{
+        font-size: 18px;
+    }
+</style>
+<body>
+<header class="topHead">
+    <header class="logo-orange">
+        东箭完整家居.e键美家
+    </header>
+    <div class="banner" id="center">
+        <img src="images/design-img1.jpg" class="banner_img">
+        <img src="images/design-img2.jpg" class="banner_img">
+        <img src="images/design-img3.jpg" class="banner_img">
+        <img src="images/design-img1.jpg" class="banner_img">
+        <img src="images/design-img2.jpg" class="banner_img">
+        <img src="images/design-img3.jpg" class="banner_img">
+    </div>
+</header>
+<section class="mainCont1">
+            <p class="fenge-text">工厂设计师大本营</p>
+            <div class="fenge"><span></span></div>
+            <ul>
+                <li><b>●</b> 集结优秀工长、设计师</li>
+                <li><b>●</b> 免费提供装修助手</li>
+                <li><b>●</b> 专业监理全程跟进</li>
+                <li><b>●</b> 单个项目单个结，比装修公司价格低30%</li>
+                <li><b>●</b> e键美家平台托起，施工售后质量保证</li>
+            </ul>
+</section>
+<section class="construct">
+            <p class="fenge-text">透明计价施工</p>
+    <div class="fenge"><span></span></div>
+            <ul class="flex">
+                <li>
+                    <img src="images/box1.png" alt=""/>
+                    <p>包设计</p>
+                </li>
+                <li>
+                    <img src="images/box2.png" alt=""/>
+                    <p>包辅材</p>
+                </li>
+                <li>
+                    <img src="images/box3.png" alt=""/>
+                    <p>包人工</p>
+                </li>
+                <li>
+                    <img src="images/box4.png" alt=""/>
+                    <p>零增项</p>
+                </li>
+            </ul>
+
+           <table border="1">
+               <tr>
+                   <td colspan="5">包人工</td>
+               </tr>
+               <tr>
+                   <td>吊顶</td>
+                   <td>瓷砖</td>
+                   <td>水电</td>
+                   <td>瓦工</td>
+                   <td>油漆</td>
+               </tr>
+           </table>
+    <table border="1">
+        <tr>
+            <td colspan="5">包辅料</td>
+        </tr>
+        <tr>
+            <td>水管</td>
+            <td>电线</td>
+            <td>水泥</td>
+            <td>黄沙</td>
+            <td>PVC线管</td>
+        </tr>
+    </table>
+</section>
+<section class="E-advantage e-common-top six-advance">
+    <p class="fenge-text">六大优势</p>
+    <div class="fenge"><span></span></div>
+    <ul>
+        <li>
+            <span><b>01</b></span>
+            <p>透明计价</p>
+        </li>
+        <li>
+            <span><b>02</b></span>
+            <p>无增项</p>
+        </li>
+        <li>
+            <span><b>03</b></span>
+            <p>名牌辅材</p>
+        </li>
+        <li>
+            <span><b>04</b></span>
+            <p>专业施工</p>
+        </li>
+        <li>
+            <span><b>05</b></span>
+            <p>全程监理</p>
+        </li>
+        <li>
+            <span><b>06</b></span>
+            <p>全方位服务</p>
+        </li>
+    </ul>
+</section>
+    <!-- 底价三款设计包-->
+            <div class="experience">
+                <div class="experience_yellow"></div>
+                <div class="experience_bg">
+                    <h3>体验馆</h3>
+                    <p>Experience Hall</p>
+                    <div>
+                        <div class="experience1"></div>
+                        <div class="experience_q"></div>
+                        <div class="experience2"></div>
+                    </div>
+                    <div class="experience_price">
+                        <ul>
+                            <li><p><span class="experience_span">50</span>元/㎡</p></li>
+                            <li><p><span class="experience_span">60</span>元/㎡</p></li>
+                            <li><p><span class="experience_span">70</span>元/㎡</p></li>
+                        </ul>
+                    </div>
+                    <div id="experience_wraps" style="margin-top: 10px">
+
+                        <ul id="experience_wrap">
+                            <li>
+                                <img src="images/ty1.png" alt="">
+                                <div></div>
+                            </li>
+                            <li>
+                                <img src="images/ty1.png" alt="">
+                                <div></div>
+                            </li>
+                            <li>
+                                <img src="images/ty1.png" alt="">
+                                <div></div>
+                            </li>
+                            <li>
+                                <img src="images/ty1.png" alt="">
+                                <div></div>
+                            </li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+
+<footer>
+    <ul class="nav-footer clearfix">
+      <li><a href="index.html">首页</a></li>
+      <li><a href="e-taocan.html">e键套餐</a></li>
+      <li><a href="quantity.html">0元量房设计</a></li>
+      <li><a href="">优惠活动</a></li>
+      <li><a href="experience.html">线下体验馆</a></li>
+      <li><a href="factoryDesign.html">创客工长设计师</a></li>
+      <li><a href="about.html">关于我们</a></li>
+    </ul>
+    <address class="clearfix">
+        <ul>
+            <li>e键美家</li>
+            <li>15205810632</li>
+            <li>版权所有：东箭完整家居e键美家</li>
+            <li>浙ICP88888888号</li>
+        </ul>
+        <img src="images/wewei.jpg" alt="">
+    </address>
+</footer>
+<script src="js/factoryDes.js"></script>
+</body>
+</html>
