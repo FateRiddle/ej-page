@@ -1,112 +1,106 @@
 /**
  * Created by Administrator on 2017/3/24.
  */
-var oUl = document.getElementById("experience_wrap");
-var liAll = oUl.getElementsByTagName("li");
-var oWrap = document.getElementById("experience_wraps");
+//show
+$(function(){
+    var showBigData=[
+        ["279-big1","279-big2","279-big3","279-big1"],
+        ["399d1-big","399d2-big","399d3-big","399d1-big"],
+        ["399j1-big","399j2-big","399j3-big","399j1-big"],
+        ["399-big1","399-big2","399-big3","399-big1"],
+        ["599-big1","599-big2","599-big3","599-big1"],
+        ["799-big1","799-big2","799-big3","799-big1"]
+    ];
+    var showSmallData=[
+        ["279-small1","279-small2","279-small3","279-small1"],
+        ["399d1-small","399d2-small","399d3-small","399d1-small"],
+        ["399j1-small","399j2-small","399j3-small","399j1-small"],
+        ["399-small1","399-small2","399-small3","399-small1"],
+        ["599-small1","599-small2","599-small3","599-small1"],
+        ["799-small1","799-small2","799-small3","799-small1"]
+    ];
+    $("#container-tab").on("touchstart","li",function(){
+        var i=$(this).index();
+        //tab切换
+        $(this).addClass("exp-active").siblings().removeClass("exp-active");
+        //大图切换
+        $(".car-big img").each(function(index,src){
+            src.src="images/"+showBigData[i][index]+".jpg";
+        });
+    //    小图切换
+        $(".car-small img").each(function(index,src){
+            src.src="images/"+showSmallData[i][index]+".jpg";
+        });
+    });
+    var Ewidth=$(".exper-container-carsouel").width();
+    console.log(Ewidth);
+    $(".car-big img").width(Ewidth);
+    var imgHei= $(".car-big img").height();
+    $(".exper-container-carsouel").height(imgHei);
+    expCarsouel();
+    function expCarsouel(){
+        var i=0;
+        var bigBox=$(".car-big");
+        //var bigBoxLi=$(".car-big li");
+        var smallBox=$(".car-small li");
+        var Xstart,Xend,Xmove;
+        //var firstLi=bigBoxLi.first().clone();
+        bigBox.width(Ewidth*4);
+        bigBox.on("touchstart",function(e){
+            e.preventDefault();
+            Xstart= e.originalEvent.changedTouches[0].pageX;
 
-var myAttr = [{
-    "left": 10.9,
-    "zindex": 2,
-    "scale": 0.8,
-    "index": 0,
-    "oc": 0.4
-}, {
-    "left":0,
-    "zindex": 3,
-    "scale": 0.9,
-    "index": 1,
-    "oc": 0.6
-}, {
-    "left": 10.9,
-    "zindex": 4,
-    "scale": 1,
-    "index": 2,
-    "oc": 0
-}, {
-    "left": 22,
-    "zindex": 3,
-    "scale": 0.9,
-    "index": 3,
-    "oc": 0.6
-}];
-//体验馆轮播图
-oWrap.style.height = (liAll[2].offsetWidth*0.8) + "px";
-setStyle(liAll, myAttr)
-function change(n) {
-    for(var i = 0; i < n; i++) {
-        var temp = myAttr[0];
-        myAttr[0] = myAttr[1];
-        myAttr[1] = myAttr[2];
-        myAttr[2] = myAttr[3];
-        myAttr[3] = temp;
-    }
-}
-function changes(n) {
-    for(var i = 0; i < n; i++) {
-        var temp = myAttr[0];
-        myAttr[0] = myAttr[3];
-        myAttr[3] = myAttr[2];
-        myAttr[2] = myAttr[1];
-        myAttr[1] = temp;
-    }
-}
-var times = setInterval(startMove, 3000);
-function startMove() {
-    change(1);
-    setStyle(liAll, myAttr)
-}
-function startMoves() {
-    setTimeout("startMove()","3000");
-    changes(1);
-    setStyle(liAll, myAttr)
-}
-function setStyle(elements, styleArr) {
-    for(var i = 0; i < elements.length; i++) {
-        elements[i].style.left = styleArr[i].left + "%";
-        elements[i].style.zIndex = styleArr[i].zindex;
-        elements[i].style.transform = "scale(" + styleArr[i].scale + ")";
-        elements[i].isIndex = styleArr[i].index;
-        elements[i].lastElementChild.style.opacity = styleArr[i].oc;
-    }
-}
-var startX = endX = delaX = 0;
-for(var i = 0; i < liAll.length; i++) {
-    liAll[i].addEventListener('touchstart',function (event) {
-        var touch = event.targetTouches[0];
-        startX = touch.pageX
+        });
+        bigBox.on("touchend",function(e){
+            e.preventDefault();
+            Xend= e.originalEvent.changedTouches[0].pageX;
+            Xmove=Xend-Xstart;
+            if(Xmove<30){
+                clearInterval(timer);
+               moveRight();
+            }else if(Xmove>-30){
+                clearInterval(timer);
+                moveLeft();}
 
+        });
+        timer=setInterval(function(){
+           moveRight();
+        },3000);
+        //点击
+        $(".btn-L").on("touchstart",function(){
+            clearInterval(timer);
+            moveLeft();
 
-    },false);
-    liAll[i].addEventListener('touchmove',function (event) {
-        var touch = event.targetTouches[0];
-        endX = touch.pageX;
+        });
+        $(".btn-R").on("touchstart",function(){
+            moveRight();
+        });
+        function moveRight(){
+            i++;
+            if(i>3){
+                i=1;
+                bigBox.css("left",0);
+            }
+            bigBox.stop().animate({left:-i*Ewidth},1000);
+            if(i>2){
+            smallBox.eq(0).addClass("active").siblings().removeClass("active");
+            }else{
 
-        delaX = startX - endX;
-    },false);
-    liAll[i].addEventListener("touchend",function (event) {
-        if (delaX > 0){
-            startMoves();
+                smallBox.eq(i).addClass("active").siblings().removeClass("active");
+            }
+
         }
-        if (delaX < 0){
-            startMove();
+        function moveLeft(){
+            i--;
+            if(i<0){
+                i=2;
+                bigBox.css("left",-(i+1)*Ewidth);
+            }
+            bigBox.stop().animate({left:-i*Ewidth},1000);
+            smallBox.eq(i).addClass("active").siblings().removeClass("active");
         }
-    },false)
-}
 
-//顶部轮播
-var oBa = document.getElementsByClassName("banner");
-var oBm = document.getElementsByClassName("banner_img");
-oBm[0].style.width = (oBa[0].offsetWidth) + "px";
-oBm[1].style.width = (oBa[0].offsetWidth) + "px";
-oBm[2].style.width = (oBa[0].offsetWidth) + "px";
-oBm[3].style.width = (oBa[0].offsetWidth) + "px";
-oBm[4].style.width = (oBa[0].offsetWidth) + "px";
-oBm[5].style.width = (oBa[0].offsetWidth) + "px";
-oBa[0].style.width = (oBa[0].offsetWidth*6) + "px";
-var time = setInterval(function () {
-    oBa[0].style.left = (oBa[0].offsetLeft - oBa[0].offsetWidth/6) + "px";
-    if (oBa[0].offsetLeft == -oBa[0].offsetWidth/2 ){
-        oBa[0].style.left = 0 + "px";
+
     }
-},2000);
+
+});

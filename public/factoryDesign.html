@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
     <meta name="apple-mobile-web-app-capable" content="yes" />
-    <title>工厂设计师</title>
+    <title>工长设计师</title>
     <link rel="stylesheet" href="css/reset.css"/>
     <link rel="stylesheet" href="css/public.css"/>
     <link rel="stylesheet" href="css/style.css"/>
@@ -106,20 +106,18 @@
 
     }
     .experience_price ul{
-        width:90%;
-        display: -webkit-flex;
-        margin:20px auto;
+        margin: 2em 0;
     }
     .experience_price p{
-        width:80%;
-        border:1px solid #fff;
-        height:30px;
-        line-height: 30px;
+        border: 1px solid #fff;
+        height: 2em;
+        line-height: 2em;
+        font-size: 1.5em;
     }
     .experience_price ul li{
-        display:inline-block;
-        flex:1;
-        font-size: 14px;
+        display: inline-block;
+        width: 23.125%;
+        margin: 0 4%;
 
     }
     .experience_span{
@@ -127,7 +125,7 @@
     }
 </style>
 <body>
-<header class="topHead">
+<header class="topHead" style="overflow:hidden;">
     <header class="logo-orange">
         东箭完整家居.e键美家
     </header>
@@ -140,9 +138,16 @@
         <img src="images/design-img3.jpg" class="banner_img">
     </div>
 </header>
+<div style="text-align: center">
+    <a href="taocan/index.html?kuan=%E6%A0%87%E5%87%86%E6%AC%BE"><button type="button" class="form-button" id="yuyue">立即预约</button></a>
+</div>
 <section class="mainCont1">
-            <p class="fenge-text">工厂设计师大本营</p>
-            <div class="fenge"><span></span></div>
+    <div class="comTit1">
+        <p class="hTit1">工长设计师大本营</p>
+        <div class="comLine1">
+            <span></span><b></b><span></span>
+        </div>
+    </div>
             <ul>
                 <li><b>●</b> 集结优秀工长、设计师</li>
                 <li><b>●</b> 免费提供装修助手</li>
@@ -152,8 +157,12 @@
             </ul>
 </section>
 <section class="construct">
-            <p class="fenge-text">透明计价施工</p>
-    <div class="fenge"><span></span></div>
+    <div class="comTit1">
+        <p class="hTit1">透明计价施工</p>
+        <div class="comLine1 otherLine">
+            <span></span><p>456<span>元/㎡</span></p><span></span>
+        </div>
+    </div>
             <ul class="flex">
                 <li>
                     <img src="images/box1.png" alt=""/>
@@ -199,9 +208,13 @@
     </table>
 </section>
 <section class="E-advantage e-common-top six-advance">
-    <p class="fenge-text">六大优势</p>
-    <div class="fenge"><span></span></div>
-    <ul>
+    <div class="comTit1">
+        <p class="hTit1">六大优势</p>
+        <div class="comLine1">
+            <span></span><b></b><span></span>
+        </div>
+    </div>
+    <ul class="clearfix">
         <li>
             <span><b>01</b></span>
             <p>透明计价</p>
@@ -228,53 +241,60 @@
         </li>
     </ul>
 </section>
-    <!-- 底价三款设计包-->
-            <div class="experience">
-                <div class="experience_yellow"></div>
-                <div class="experience_bg">
-                    <h3>体验馆</h3>
-                    <p>Experience Hall</p>
-                    <div>
-                        <div class="experience1"></div>
-                        <div class="experience_q"></div>
-                        <div class="experience2"></div>
-                    </div>
-                    <div class="experience_price">
-                        <ul>
-                            <li><p><span class="experience_span">50</span>元/㎡</p></li>
-                            <li><p><span class="experience_span">60</span>元/㎡</p></li>
-                            <li><p><span class="experience_span">70</span>元/㎡</p></li>
-                        </ul>
-                    </div>
-                    <div id="experience_wraps" style="margin-top: 10px">
-
-                        <ul id="experience_wrap">
-                            <li>
-                                <img src="images/ty1.png" alt="">
-                                <div></div>
-                            </li>
-                            <li>
-                                <img src="images/ty1.png" alt="">
-                                <div></div>
-                            </li>
-                            <li>
-                                <img src="images/ty1.png" alt="">
-                                <div></div>
-                            </li>
-                            <li>
-                                <img src="images/ty1.png" alt="">
-                                <div></div>
-                            </li>
-                        </ul>
-                    </div>
-
+    <!-- 设计包-->
+<section>
+    <div>
+        <div class="comTit1">
+            <p class="hTit1">设计包</p>
+            <div class="comLine1">
+                <span></span><b></b><span></span>
+            </div>
+        </div>
+        <div class="exper-adderss-imgList clearfix">
+            <div class="imgList-item item1">
+                <img src="images/desBox1.jpg" alt="1"/>
+                <span>50元/㎡</span>
+                <p>简约风格<br/>Concise style</p>
+            </div>
+            <div class="imgList-item item2 no-margin">
+                <img src="images/desBox2.jpg" alt="2"/>
+                <span>60元/㎡</span>
+                <p>简约田园风格<br/>Contracted rural style</p>
+            </div>
+            <div class="imgList-item item3">
+                <div class="imgList-item no-margin">
+                    <img src="images/desBox3.jpg" alt="3"/>
+                    <span>70元/㎡</span>
+                    <p>美式风格<br/>American style</p>
+                </div>
+                <div class="imgList-item no-margin">
+                    <img src="images/desBox4.jpg" alt="4"/>
+                    <span>80元/㎡</span>
+                    <p>新中式风格<br/>New Chinese style</p>
                 </div>
             </div>
-
+            <div class="imgList-item item4 no-margin">
+                <img src="images/desBox5.jpg" alt="5"/>
+                <span>90元/㎡</span>
+                <p>新古典风格<br/>New classical style</p>
+            </div>
+            <div class="imgList-item item5 no-margin">
+                <img src="images/desBox6.jpg" alt="6"/>
+                <span>100元/㎡</span>
+                <p>后现代风格<br/>The postmodern style</p>
+            </div>
+            <div class="imgList-item item5 no-margin">
+                <img src="images/desBox6.jpg" alt="6"/>
+                <span>100元/㎡</span>
+                <p>混搭风格<br/>Mix building a style</p>
+            </div>
+        </div>
+    </div>
+</section>
 <footer>
     <ul class="nav-footer clearfix">
       <li><a href="index.html">首页</a></li>
-      <li><a href="e-taocan.html">e键套餐</a></li>
+      <li><a href="E-taocan.html">e键套餐</a></li>
       <li><a href="quantity.html">0元量房设计</a></li>
       <li><a href="">优惠活动</a></li>
       <li><a href="experience.html">线下体验馆</a></li>
@@ -282,13 +302,22 @@
       <li><a href="about.html">关于我们</a></li>
     </ul>
     <address class="clearfix">
-        <ul>
-            <li>e键美家</li>
-            <li>15205810632</li>
-            <li>版权所有：东箭完整家居e键美家</li>
-            <li>浙ICP88888888号</li>
-        </ul>
-        <img src="images/wewei.jpg" alt="">
+        <div class="lx">
+            <div>
+                <img src="images/weibo.png" alt="">
+                <span>e键美家</span>
+            </div>
+            <div>
+                <img src="images/phone.png" alt="">
+                <span>15205810632</span>
+            </div>
+            <p>版权所有： 东箭完整家居e键美家</p>
+            <p>浙ICP88888888号</p>
+        </div>
+        <div class="wx">
+            <img src="images/wewei.jpg" alt="">
+            <p>(关注我们)</p>
+        </div>
     </address>
 </footer>
 <script src="js/factoryDes.js"></script>

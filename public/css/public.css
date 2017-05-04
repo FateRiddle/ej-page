@@ -1,48 +1,81 @@
+@media screen and (max-width: 320px) {    body{font-size: 8px;}}
+@media screen and (min-width: 321px) and (max-width: 413px) {    body{font-size: 10px;}}
+@media screen and (min-width: 414px) and (max-width: 639px) {    body{font-size: 12px;}}
+@media screen and (min-width: 640px) {    body{font-size: 16px;}}
+
+
 .logo-white, .logo-orange {
-  padding: 10px 0;
+  padding: 1em 0;
   text-indent: -999px;
-  background: #c7c6c5 url("../images/logo-white.png") padding-box no-repeat center/90%; }
+  background: #c7c6c5 url("../images/logo-white.png") padding-box no-repeat center/76%; }
 
 /*common-logo*/
 footer {
-  padding: 20px 10px;
-  background: #4d4948;
-  overflow: hidden; }
+  background-color: #4d4948;
+  position: relative;
+  padding-bottom: 7em;
+  padding-top: 2.5em;}
 
 .nav-footer {
-  overflow: hidden; }
+  text-align: center;
+  margin-bottom: 1em; }
   .nav-footer li {
-    font-size: 14px;
-    padding: 0 10px;
-    float: left;
-    line-height: 16px;
-    margin-bottom: 20px;
-    border-right: solid 1px #fff; }
-  .nav-footer:nth-child(4), .nav-footer:nth-child(7) {
+    display: inline-block;
+    height: 1.18em;
+    line-height: 1.18em;
+    border-right: 2px solid #fff;
+    padding: 0 3%;
+    margin-bottom: 1.36em;
+    font-size: 1.375em;}
+  .nav-footer li:nth-child(4), .nav-footer li:nth-child(7) {
     border: none; }
   .nav-footer a {
-    color: #fff; }
+    color:#fff;
+    width:100%; }
   .nav-footer address {
     width: 90%;
     padding: 0 5%; }
 
-address ul {
+.lx{
   float: left;
-  padding-left: 10px; }
-  address ul li {
-    font-size: 14px;
-    line-height: 26px;
-    color: #fff; }
-  address ul li:first-child {
-    background: url("../images/weibo.png") padding-box no-repeat left center/10%;
-    text-indent: 30px; }
-  address ul li:nth-child(2) {
-    background: url("../images/phone.png") no-repeat left center/10%;
-    text-indent: 30px; }
-
-address img {
-  float: right;
-  width: 26%; }
+  width: 65%;
+  margin-top: 0.833em;
+  color: white;
+  font-size: 1.5em;
+}
+.lx div{
+  margin-left: 20%
+}
+.lx img{
+  width: 1.875em;
+  vertical-align: middle;
+}
+.lx div{
+  margin-bottom: 1em;
+}
+.lx p{
+  text-align: center;
+  margin-top: 10px;
+  font-size: 0.75em;
+}
+.lx p:last-child{
+  font-size: 0.58em;
+}
+.wx{
+  float:left;
+  width: 26.5625%;
+  color: white;
+  text-align: center;
+  font-size: 1.5em;
+}
+.wx img{
+  width: 100%;
+}
+.clearfix:after{
+  display: block;
+  content: "";
+  clear:both;
+}
 
 /*common-footer*/
 

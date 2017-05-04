@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -13,9 +13,9 @@
 </head>
 <body>
 <!--东箭完整家居-->
-<section>
+<section style="overflow:hidden;">
     <header class="logo-orange">
-        东箭完整家居.e键美家
+        东箭完整家居.e键美家 <span></span>
     </header>
     <div class="banner" id="center">
         <img src="images/banner1.jpg" class="banner_img">
@@ -62,14 +62,13 @@
 <section class="quantity-form homepage-order">
     <p><b>0元</b>设计/量房</p>
     <form>
-        <input id="name" type="text" placeholder="您的姓名"/>
-        <input id="phone" type="tel" placeholder="您的电话"/>
+        <input id="name" type="text" placeholder="您的姓名" maxlength="6"/><span class="iconM" style="visibility:hidden">㎡</span><br>
+        <input id="phone" type="tel" placeholder="您的电话" maxlength="11"/><span class="iconM" style="visibility:hidden">㎡</span><br>
         <div>
-            <input id="area" type="text" placeholder="您的房屋面积"/>
-            <span>m<sup>2</sup></span>
+            <input id="area" type="text" placeholder="您的房屋面积" maxlength="6"/><span class="iconM">㎡</span><br>
         </div>
         <div class="message"></div>
-        <input type='button' id="yuyue" value="我要预约"/>
+        <button type="button" class="form-button" id="yuyue">我要预约</button>
     </form>
 </section>
 
@@ -78,14 +77,14 @@
     <!-- 轮播-->
     <div class="e-switch-md">
         <ul id="result_show">
-            <li><img src="images/e-img1.jpg"alt=""></li>
+            <li><img src="images/e-img2.jpg"alt=""></li>
             <li  style="display: none"><img src="images/e-img1.jpg" alt=""></li>
-            <li  style="display: none"><img src="images/e-img2.jpg" alt=""></li>
-            <li style="display: none"><img src="images/e-img3.jpg" alt=""></li>
+            <li  style="display: none"><img src="images/e-img3.jpg" alt=""></li>
+            <li style="display: none"><img src="images/e-img5.jpg" alt=""></li>
             <li style="display: none"><img src="images/e-img4.jpg" alt=""></li>
         </ul>
         <div id="result_where" class="e-switch-bt">
-            <div class="result_w" style="background-color: orange;index:0;">客厅</div>
+            <div class="result_w" style="background-color:#ffc519;index:0;">客厅</div>
             <div class="result_w" style="index:1">厨房</div>
             <div class="result_w" >卧室</div>
             <div class="result_w" >卫浴</div>
@@ -94,7 +93,9 @@
     </div>
 </section>
          <section class="brand">
-                 <h2 class="home-common-top">39大品牌齐亮相</h2>
+                 <div class="home-common-top"> <b></b>
+                     <h3>39大品牌齐亮相</h3>
+                     <p>39 big brand Qi debut</p></div>
              <div class="brand_bg">
                  <div id="brand_bgs">
                      <div>
@@ -188,15 +189,19 @@
          </section>
          <!--服务-->
       <section class="serve">
-                  <h2 class="home-common-top">服务流程</h2>
-             <img src="images/lc.png" class="serve_bg">
+          <div class="home-common-top"> <b></b>
+              <h3>服务流程</h3>
+              <p>Service Process</p></div>
+             <img src="images/process.png" class="serve_bg">
       </section>
          <!--体验-->
 <section>
     <div class="exper-adderss">
         <h3>体验馆</h3>
-        <span>Experience Hall</span>
-        <div class="fenge"><span></span></div>
+        <p>Experience Hall</p>
+        <div class="fenge">
+            <span></span><b></b><span></span>
+        </div>
         <div class="exper-adderss-img" id="experience_wraps">
             <ul id="experience_wrap">
                 <li>
@@ -216,105 +221,103 @@
                     <div></div>
                 </li>
             </ul>
-            <p>
-                杭州江干区新时代建材市场a馆3楼&nbsp;&nbsp;e键美家杭州体验馆
-            </p>
+        </div>
+        <div class="experience_dz">
+            <img src="images/site.png" class="experience_img">
+            <span class="span1">杭州市富阳区东洲工业园十三号路与东望路交叉口<br/>东箭集团完整家居
+</span>
         </div>
     </div>
 </section>
 <figure class="exper-figure">
-    <img src="images/map.png" alt="">
+    <img src="images/map01.jpg" alt="">
+        <div>
+            <a href="http://map.baidu.com/?shareurl=1&poiShareUid=4190a095e3444e9931f71d85"><button>立即导航</button></a>
+        </div>
 </figure>
-<section class="    designers">
-                 <h2 class="home-common-top">创客工长设计师</h2>
+<section class=" designers">
+    <div class="home-common-top"> <b></b>
+        <h3>创客工长设计师</h3>
+        <p>Designers</p></div>
     <div class="designers_center">
-           <div class="designers-top flex">
+           <div class="designers-top clearfix">
                <div>
-               <img src="images/gz-icon.png" alt="" style="width:100%">
-               </div>
-               <div>
+               <img src="images/gz-icon.png" alt="" style="width:100%;height:110%">
+               </div >
+               <div class="desgin-flex-right">
                    <p>透明计价施工包</p>
-                   <p>456<span>元/m²</span></p>
+                   <p><span>456</span>元/m²</p>
                </div>
-               <div>
+               <div class="desgin-flex-right">
                    <p>透明计价施工包</p>
-                   <p>50<span>元/m²</span></p>
+                   <p><span>50</span>元/m²</p>
                </div>
            </div>
-        <div class="designers-bottom flex">
-            <div>
-                <img src="images/sjs-icon.png" alt="" style="width:100%">
+        <div class="designers-bottom  clearfix">
+            <div style="border:1px solid #ccc; background:#fff;border-top:0;margin-left:-2px;">
+                <img src="images/sjs-icon.jpg" alt="" style="width:100%; height:100%;padding-top: 4%;">
             </div>
             <div>
                 <ul>
-                    <li>集结优秀工长丶 设计师</li>
-                    <li>免费提供装修助手</li>
-                    <li>专业监理全程跟进</li>
-                    <li>单个项目单个结，比装修公司价格低30%</li>
-                    <li>e键美家平台托底，施工售后质量保证</li>
+                    <li><span class="point">●</span>集结优秀工长丶 设计师</li>
+                    <li><span class="point">●</span>免费提供装修助手</li>
+                    <li><span class="point">●</span>专业监理全程跟进</li>
+                    <li><span class="point">●</span>单个项目单个结，比装修公司价格低30%</li>
+                    <li><span class="point">●</span>e键美家平台托底，施工售后质量保证</li>
                 </ul>
             </div>
         </div>
-        <button>立即咨询</button>
     </div>
+    <a href="factoryDesign.html"><button class="ask-now">立即咨询</button></a>
 </section>
          <!--优势-->
         <section class="advantage">
-                  <h2 class="home-common-top">八大优势</h2>
-                 <ul class="advantage_center flex">
+            <div class="home-common-top"> <b></b>
+                <h3>八大优势</h3>
+                <p>Eight advantages</p></div>
+                 <ul class="advantage_center">
                      <li>
-                         <div><div>01</div></div>
-                         <p>F2C模式</p>
-                         <p>省一半</p>
+                         <p><span>01</span></p>
+                         <span>F2C模式<br/>省一半</span>
                      </li>
                      <li>
-                         <div><div>02</div></div>
-                         <p>一口价</p>
-                         <p>免磨嘴皮</p>
+                         <p><span>02</span></p>
+                         <span>一口价<br/>免磨嘴皮</span>
                      </li>
                      <li>
-                         <div><div>03</div></div>
-                         <p>万款名品</p>
-                         <p>聚划算</p>
+                         <p><span>03</span></p>
+                         <span>万款名品<br/>聚划算</span>
                      </li>
                      <li>
-                         <div><div>04</div></div>
-                         <p>必备主材</p>
-                         <p>一包到位</p>
+                         <p><span>04</span></p>
+                         <span>必备主材<br/>一包到位</span>
                      </li>
                      <li>
-                         <div><div>05</div></div>
-                         <p>百变风格</p>
-                         <p>任性组合</p>
+                         <p><span>05</span></p>
+                         <span>百变风格<br/>任性组合</span>
                      </li>
                      <li>
-                         <div><div>06</div></div>
-                         <p>用户至上</p>
-                         <p>服务至微</p>
+                         <p><span>06</span></p>
+                         <span>用户至上<br/>服务至微 </span>
                      </li>
                      <li>
-                         <div>
-                             <div>07</div>
-                         </div>
-                         <p>线上看效果</p>
-                         <p>线下看实物</p>
+                         <p><span>07</span></p>
+                         <span>线上看效果<br/>线下看实物</span>
                      </li>
                      <li>
-                         <div><div>08</div></div>
-                         <p>下一单一键式</p>
-                         <p>预约安装</p>
+                         <p><span>08</span></p>
+                         <span>下单后一键式<br/>预约安装</span>
                      </li>
                  </ul>
         </section>
-<div id="fd">
-    <img src="images/sz.png" >
-    <a href="">
+<div id="fixed-button">
+    <a class="fixed-buttonL" href="quantity.html">
+        <img src="images/sz.png" alt=""/>
         <p><span>0元</span>申请量房/设计</p>
-    </a>
-    <img src="images/zxzx.png" >
-    <a href="">
-        <p>在线咨询</p>
-    </a>
+    </a><a href="E-taocan.html">
+    <img src="images/zxzx.png" alt=""/>
+    <p>在线咨询</p>
+</a>
 </div>
 <!--浮动-->
 
@@ -322,7 +325,7 @@
 <footer>
     <ul class="nav-footer clearfix">
       <li><a href="index.html">首页</a></li>
-      <li><a href="e-taocan.html?id=1">e键套餐</a></li>
+      <li><a href="E-taocan.html?id=1">e键套餐</a></li>
       <li><a href="quantity.html">0元量房设计</a></li>
       <li><a href="">优惠活动</a></li>
       <li><a href="experience.html">线下体验馆</a></li>
@@ -330,19 +333,29 @@
       <li><a href="about.html">关于我们</a></li>
     </ul>
     <address class="clearfix">
-        <ul>
-            <li>e键美家</li>
-            <li>15205810632</li>
-            <li>版权所有：东箭完整家居e键美家</li>
-            <li>浙ICP88888888号</li>
-        </ul>
-        <img src="images/wewei.jpg" alt="">
+        <div class="lx">
+            <div>
+                <img src="images/weibo.png" alt="">
+                <span>e键美家</span>
+            </div>
+            <div>
+                <img src="images/phone.png" alt="">
+                <span>15205810632</span>
+            </div>
+            <p>版权所有： 东箭完整家居e键美家</p>
+            <p>浙ICP88888888号</p>
+        </div>
+        <div class="wx">
+            <img src="images/wewei.jpg" alt="">
+            <p>(关注我们)</p>
+        </div>
     </address>
 </footer>
 <script src="js/commons.js" charset="utf-8"></script>
 <script src="js/liangfang.js" charset="utf-8"></script>
-<script src="js/etest.js"></script>
+<!--<script src="js/etest.js"></script>-->
 <script type="text/javascript" src="js/homepage.js"></script>
-<script src="js/ehome.js"></script>
+<!--<script src="js/ehome.js"></script>-->
 </body>
+
 </html>

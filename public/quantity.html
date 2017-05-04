@@ -16,32 +16,35 @@
         东箭完整家居.e键美家
     </header>
             <div id="center" class="banner">
-                    <img src="images/banner1.jpg" class="banner_img">
-                    <img src="images/banner2.jpg" class="banner_img">
-                    <img src="images/banner3.jpg" class="banner_img">
-                    <img src="images/banner1.jpg" class="banner_img">
-                    <img src="images/banner2.jpg" class="banner_img">
-                    <img src="images/banner3.jpg" class="banner_img">
+                    <img src="images/0banner.jpg" class="banner_img">
+                    <img src="images/0banner.jpg" class="banner_img">
+                    <img src="images/0banner.jpg" class="banner_img">
+                    <img src="images/0banner.jpg" class="banner_img">
+                    <img src="images/0banner.jpg" class="banner_img">
+                    <img src="images/0banner.jpg" class="banner_img">
             </div>
 </section>
 <section class="quantity-form">
             <p><b>0元</b>设计/量房</p>
             <form>
-                <input id="name" type="text" placeholder="您的姓名"/>
-                <input id="phone" type="tel" placeholder="您的电话"/>
+                <input id="name" type="text" placeholder="您的姓名" maxlength="6"/><span class="iconM" style="visibility:hidden">㎡</span><br>
+                <input id="phone" type="tel" placeholder="您的电话" maxlength="11"/><span class="iconM" style="visibility:hidden">㎡</span><br>
                 <div>
-                    <input id="area" type="text" placeholder="您的房屋面积"/>
-                    <span>m<sup>2</sup></span>
+                    <input id="area" type="text" placeholder="您的房屋面积" maxlength="6"/><span class="iconM">㎡</span><br>
                 </div>
                 <div class="message"></div>
-                <input type="button" id="yuyue" value="我要预约"/>
+                <button type="button" class="form-button" id="yuyue">我要预约</button>
             </form>
         <img src="images/progress.png" alt="流程"/>
 </section>
 <!--五大功效-->
-<section class="quantity-five">
-            <p class="fenge-text">专业量房五大功效</p>
-            <div class="fenge"><span></span></div>
+<section class="quantity-five clearfix">
+    <div class="comTit1">
+        <p class="hTit1">专业量房五大功效</p>
+        <div class="comLine1">
+            <span></span><b></b><span></span>
+        </div>
+    </div>
             <ul>
                 <li>01 专业检测房屋尺寸</li>
                 <li>02 了解采光、噪音、气流状况</li>
@@ -53,8 +56,12 @@
 </section>
 <!--量房工艺-->
 <section class="quantity-worker">
-    <p class="fenge-text">e键美家量房工艺</p>
-    <div class="fenge"><span></span></div>
+    <div class="comTit1">
+        <p class="hTit1">e键美家量房工艺</p>
+        <div class="comLine1">
+            <span></span><b></b><span></span>
+        </div>
+    </div>
         <div class="banner">
             <ul class="img">
                 <li><a href='#'><img src='images/quantity-img1.jpg' alt='第张图片'></a></li>
@@ -67,24 +74,32 @@
 </section>
     <!--平面设计-->
 <section class="free-design">
-    <p class="fenge-text">免费设计工艺图</p>
-    <div class="fenge"><span></span></div>
+    <div class="comTit1">
+        <p class="hTit1">免费设计工艺图</p>
+        <div class="comLine1">
+            <span></span><b></b><span></span>
+        </div>
+    </div>
     <ul>
-        <li><img src="images/rule1.png" alt="1"/></li>
-        <li><img src="images/rule2.png" alt="2"/></li>
-        <li><img src="images/rule3.png" alt="3"/></li>
+        <li><img src="images/rule1.png" alt="1"/><span>合理设计</br>空间布局</span></li>
+        <li><img src="images/rule2.png" alt="2"/><span>免费修改</br>设计方案</span></li>
+        <li><img src="images/rule3.png" alt="3"/><span>提供透明</br>装修报价</span></li>
     </ul>
 </section>
     <!--工地展示-->
 <section class="quantity-place">
-    <p class="fenge-text">规范工地展示</p>
-    <div class="fenge"><span></span></div>
+    <div class="comTit1">
+        <p class="hTit1">规范工地展示</p>
+        <div class="comLine1">
+            <span></span><b></b><span></span>
+        </div>
+    </div>
         <div class="banner">
-            <ul class="img1">
-                <li><a href='#'><img src='images/quantity-img5.jpg' alt='第张图片'></a></li>
-                <li><a href='#'><img src='images/quantity-img6.jpg' alt='第张图片'></a></li>
-                <li><a href='#'><img src='images/quantity-img7.png' alt='第张图片'></a></li>
-                <li><a href='#'><img src='images/quantity-img8.jpg' alt='第张图片'></a></li>
+            <ul class="img1 clearfix">
+                <li><img src='images/quantity-img5.jpg' alt='第张图片'></li>
+                <li><img src='images/quantity-img6.jpg' alt='第张图片'></li>
+                <li><img src='images/quantity-img7.png' alt='第张图片'></li>
+                <li><img src='images/quantity-img8.jpg' alt='第张图片'></li>
             </ul>
             <ul class="num1"></ul>
         </div>
@@ -93,7 +108,7 @@
 <footer>
     <ul class="nav-footer clearfix">
       <li><a href="index.html">首页</a></li>
-      <li><a href="e-taocan.html">e键套餐</a></li>
+      <li><a href="E-taocan.html">e键套餐</a></li>
       <li><a href="quantity.html">0元量房设计</a></li>
       <li><a href="">优惠活动</a></li>
       <li><a href="experience.html">线下体验馆</a></li>
@@ -101,18 +116,28 @@
       <li><a href="about.html">关于我们</a></li>
     </ul>
     <address class="clearfix">
-        <ul>
-            <li>e键美家</li>
-            <li>15205810632</li>
-            <li>版权所有：东箭完整家居e键美家</li>
-            <li>浙ICP88888888号</li>
-        </ul>
-        <img src="images/wewei.jpg" alt="">
+        <div class="lx">
+            <div>
+                <img src="images/weibo.png" alt="">
+                <span>e键美家</span>
+            </div>
+            <div>
+                <img src="images/phone.png" alt="">
+                <span>15205810632</span>
+            </div>
+            <p>版权所有： 东箭完整家居e键美家</p>
+            <p>浙ICP88888888号</p>
+        </div>
+        <div class="wx">
+            <img src="images/wewei.jpg" alt="">
+            <p>(关注我们)</p>
+        </div>
     </address>
 </footer>
 <script src="js/commons.js" charset="utf-8"></script>
 <script src="js/liangfang.js" charset="utf-8"></script>
 <script src="js/jquery.min.js"></script>
+<!--<script src="js/ehome.js"></script>-->
 <script src="js/zero.js"></script>
 </body>
 </html>

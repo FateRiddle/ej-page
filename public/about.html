@@ -15,7 +15,7 @@
         东箭完整家居.e键美家
     </header>
     <div>
-        <img src="images/ab_bg.jpg" alt="">
+        <img id="disImg" src="images/ab_bg.jpg" alt="">
         <p><span>互联网装修平台</span></p>
         <p>关于我们</p>
     </div>
@@ -48,7 +48,7 @@
 <footer>
         <ul class="nav-footer clearfix">
           <li><a href="index.html">首页</a></li>
-          <li><a href="e-taocan.html">e键套餐</a></li>
+          <li><a href="E-taocan.html">e键套餐</a></li>
           <li><a href="quantity.html">0元量房设计</a></li>
           <li><a href="">优惠活动</a></li>
           <li><a href="experience.html">线下体验馆</a></li>
@@ -56,15 +56,30 @@
           <li><a href="about.html">关于我们</a></li>
         </ul>
          <address class="clearfix">
-             <ul>
-                 <li>e键美家</li>
-                 <li>15205810632</li>
-                 <li>版权所有：东箭完整家居e键美家</li>
-                 <li>浙ICP88888888号</li>
-             </ul>
-           <img src="images/wewei.jpg" alt="">
+             <div class="lx">
+                 <div>
+                     <img src="images/weibo.png" alt="">
+                     <span>e键美家</span>
+                 </div>
+                 <div>
+                     <img src="images/phone.png" alt="">
+                     <span>15205810632</span>
+                 </div>
+                 <p>版权所有： 东箭完整家居e键美家</p>
+                 <p>浙ICP88888888号</p>
+             </div>
+             <div class="wx">
+                 <img src="images/wewei.jpg" alt="">
+                 <p>(关注我们)</p>
+             </div>
          </address>
 </footer>
+<script>
+    var oI=document.getElementById("disImg");
+    oI.addEventListener("click",function(e){
+        e.preventDefault();
+    })
+</script>
 
 </body>
 </html>

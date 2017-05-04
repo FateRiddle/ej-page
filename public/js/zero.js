@@ -2,7 +2,9 @@
  *
  * Created by Administrator on 2017/3/23.
  */
-$(function(){
+
+window.onload=function(){
+    console.log(123);
     $('.feLeft li:even').addClass('yellowBg');
     $('.feLeft li:odd').addClass('whiteBg');
 //    轮播图
@@ -16,7 +18,7 @@ $(function(){
     $('.feLeft li').css({"height":ht,"line-height":ht+'px'});
 
 
-});
+};
 //两个ul的class名
 function  carsouel(b,c){
     var i=0;
@@ -67,24 +69,27 @@ function  carsouel(b,c){
                 $(c+' li').eq(i).addClass('active').siblings().removeClass('active');
             }
         }
+        timer=setInterval(function(){ moveRight()},2000);
         return false;
     });
     //定时器自动播放
-    timer=setInterval(function(){
-        i++;
-        if (i==$(b+' li').length) {
-            i=1;
-            $(b).css({left:0});
-        };
+    timer=setInterval(function(){ moveRight()},2000);
+        function moveRight() {
+            i++;
+            if (i == $(b + ' li').length) {
+                i = 1;
+                $(b).css({left: 0});
+            }
+            ;
 
-        $(b).stop().animate({left:-i*$(b+' img').width()},300);
-        if (i==$(b+' li').length-1) {
-            $(c+' li').eq(0).addClass('active').siblings().removeClass('active');
-        }else{
-            $(c+' li').eq(i).addClass('active').siblings().removeClass('active');
+            $(b).stop().animate({left: -i * $(b + ' img').width()}, 300);
+            if (i == $(b + ' li').length - 1) {
+                $(c + ' li').eq(0).addClass('active').siblings().removeClass('active');
+            } else {
+                $(c + ' li').eq(i).addClass('active').siblings().removeClass('active');
+            }
+
         }
-    },1500);
-
 }
 
 //顶部轮播
