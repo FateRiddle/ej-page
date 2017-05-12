@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+		<meta name="description" content="e键美家-我的订单">
+		<meta name="keywords" content="订单查询,手机号,验证码">
+		<title>e键美家-我的订单</title>
+		<link rel="Shortcut Icon" href="../images/bitbug_favicon.ico">
+		<link rel="stylesheet" href="../css/reset.css">
+		<link rel="stylesheet" href="../css/style.css" />
+		<script type="text/javascript" src="../js/jquery.min.js"></script>
+	</head>
+
+	<body>
+		<header>
+			<script type="text/javascript" src="../js/header.js" ></script>
+		</header>
+		<div class="pavilion_banner"></div>
+		<!----main--开始------->
+		<main>
+			<!--位置-->
+			<div class="now_positions">
+				<div class="now_position">当前位置：
+					<a href="../html/index.html">首页 > </a>
+					<a href="../html/order.html">我的订单</a>
+				</div>
+			</div>
+
+			<div class="shang_content">
+				<form class="shang_content_order">
+					<p>订单查询</p>
+					<label>手机号</label><br />
+					<input type="text" id="tel" placeholder="请输入手机号码" maxlength="11" /><!--<span id="telSpanOn" style="color: red;font-size: 12px;float: right;"></span><span id="telSpanOk" style="color: green;font-size: 12px;float: right;"></span>--><br />
+					<label>验证码</label><br />
+					<input type="text" id="YzNum" placeholder="请输入验证码" maxlength="6" /><br />
+					<input type="submit" value="立即查询" id="telBtn" />
+				</form>
+			</div>
+
+		</main>
+
+		<!----footer--底部----->
+
+		<footer>
+			<script type="text/javascript" src="../js/footer.js" ></script>
+		</footer>
+		
+		<script type="text/javascript">
+			
+			$(document).ready(function(){
+//				$("#telBtn").click(function(){
+//					var YzNum=$("#YzNum").val()
+//					var tel=$("#tel").val();
+//					if(!tel)
+//					{
+//						$("#telSpanOn").text("*手机号不能为空");
+//						return false;
+//					}
+//					var reg=/^(1[3-9]\d{9}$)/;
+//					if(!reg.test(tel))
+//					{
+//						$("#telSpanOn").text("*请正确输入手机号码");
+//						return false;
+//					}
+//					else if(reg.test(tel))
+//					{
+//						$("#telSpanOn").text("");
+//						$("#telSpanOk").text("*输入正确");
+//					}
+//					else
+//					{
+//						$("#telSpanOn").text("*系统繁忙");
+//						return false;
+//					}
+//				});
+				
+				$(".nav .nav_a a:eq(8)").css("color","#FFC61E");
+				$("#telBtn").click(function(e){
+					e.preventDefault();
+					location.href="null.html";
+				});
+			});
+		</script>
+	</body>
+
+</html>

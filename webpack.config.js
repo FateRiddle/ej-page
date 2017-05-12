@@ -42,7 +42,7 @@ module.exports = {
             loader: "file-loader",
             options: {
               outputPath: "/assets/",  // 似乎是直接拼接上去的 两个"/"都要写
-              publicPath: "/js",   //what is this for? you don't need it in html
+              publicPath: "/mobile/js",   //what is this for? you don't need it in html
               name: '[name]--[hash:base64:5].[ext]'
             }
           }
