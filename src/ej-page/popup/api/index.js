@@ -1,7 +1,7 @@
 import axios from 'axios'
 
 export const addAppointment = ({ name,phone,bao,kuan,price }) => {
-  return axios.post('http://61.164.47.179:3000/appointment', {name,phone,bao,kuan,price}).then(
+  return axios.post('/api/appointment', {name,phone,bao,kuan,price}).then(
     (res) => {
       return res.data.output.msg
     },

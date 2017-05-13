@@ -1,36 +1,45 @@
 const path = require('path')
 const webpack = require('webpack')
+const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin
 // const CommonsChunkPlugin = require('webpack/lib/optimize/CommonsChunkPlugin')
 const CommonsChunkPlugin = webpack.optimize.CommonsChunkPlugin
 
-module.exports = {
+module.exports = (env = {}) => ({
   // context: __dirname + "/app",
   entry: {
-    liangfang: "./src/js/liangfang.js",
-    taocan: "./src/js/taocan.js",
-    popup: "./src/js/popup/index.js",
+    liangfang: "./src/ej-page/liangfang.js",
+    taocan: "./src/ej-page/taocan.js",
+    popup: "./src/ej-page/popup/index.js",
+    houtai: "./src/ej-houtai/index.js"
   },
   output: {
-    path: __dirname + "/public/js",
+    path: __dirname + "/public/dist",
     filename: "[name].js",
   },
   module: {
     rules: [
       {
-        // "test" is commonly used to match the file extension
         test: /\.js$/,
-
-        // "include" is commonly used to match the directories
         include: [
           path.resolve(__dirname, "src")
         ],
-
-        // the "loader"
-        loader: "babel-loader" // or "babel" because webpack adds the '-loader' automatically
+        loader: "babel-loader"
       },
       {
         test: /\.css$/,
-        use:["style-loader","css-loader"],
+        include: [
+          path.resolve(__dirname, "src")
+        ],
+        use: [
+          'style-loader',
+          {
+            loader: 'css-loader',
+            options: {
+              importLoaders: 1,
+            }
+          },
+          'postcss-loader'
+        ],
       },
       {
         test: /\.(jpeg|jpg|png|gif|svg)$/,
@@ -42,7 +51,7 @@ module.exports = {
             loader: "file-loader",
             options: {
               outputPath: "/assets/",  // 似乎是直接拼接上去的 两个"/"都要写
-              publicPath: "/mobile/js",   //what is this for? you don't need it in html
+              publicPath: "/mobile/dist",
               name: '[name]--[hash:base64:5].[ext]'
             }
           }
@@ -50,8 +59,19 @@ module.exports = {
       },
     ]
   },
+  // devtool:env.production?"cheap-module-source-map":"cheap-module-eval-source-map",
   plugins: [
-    new webpack.optimize.UglifyJsPlugin(),
-    new CommonsChunkPlugin("commons"),//output will be commons.js
-  ]
-}
+    new webpack.optimize.UglifyJsPlugin({
+      sourceMap:!env.production,
+      compress:env.production?{ warnings: false }:false,
+    }),
+    new webpack.optimize.CommonsChunkPlugin("commons"),
+    // new ExtractTextPlugin("style.css"),
+    new BundleAnalyzerPlugin(),
+    new webpack.DefinePlugin({
+      'process.env': {
+        'NODE_ENV': JSON.stringify('production')
+      }
+    }),
+  ],
+})

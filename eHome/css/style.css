@@ -208,7 +208,7 @@ section
 }
 .index_xf ul .index-div3{
     background:rgba(244,244,244,0.7) url("../images/index_Xf_01.png") no-repeat center 11px;
-    
+
 }
 .index_xf ul .index-div4{
     background:rgba(244,244,244,0.7) url("../images/index_Xf_02.png") no-repeat center 11px;
@@ -2883,6 +2883,7 @@ section
 {
 	margin-top: 24px;
 }
+
 .house_banner_inputs p
 {
 	font-size: 30px;
@@ -2928,6 +2929,13 @@ section
 	margin-left: 83px;
 	cursor: pointer;
 }
+
+.house_banner_inputs .message {
+	height: 30px;
+	width: 240px;
+	color:orangered;
+}
+
 .house_banner_inputs a
 {
 	color: #fff;
@@ -2936,9 +2944,9 @@ section
 	width: 240px;
 	height: 30px;
 	line-height: 30px;
-    text-align: center;
-    background: #FFC61E;
-    margin:0 auto;
+  text-align: center;
+  background: #FFC61E;
+  margin:0 auto;
 }
 
 /*服务流程*/
@@ -3463,7 +3471,7 @@ section
     position:relative;
     left:200px;
     top:-20px;
-    
+
 }
 .same-li{
     width: 100px;
@@ -4538,7 +4546,3 @@ border-color: #ffc61e;
     text-align: center;
     margin-top:5px;
 }
-
-
-
-

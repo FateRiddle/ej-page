@@ -23,23 +23,24 @@
 							<p>0元设计/量房</p>
 							<div class="house_banner_icons"><img src="../images/house_icons1.png" alt="icon" /></div>
 							<!--<img class="house_sj" src="../images/house_sj.png" alt="icon" />-->
-							<input type="text" maxlength="30" placeholder="您的地址"/>
+							<input id="address" type="text" maxlength="30" placeholder="您的地址"/>
 							<!--<select>
 								<option value="">杭州</option>
 							</select>-->
 							<div class="house_banner_icons"><img src="../images/house_icons2.png" alt="icon" /></div>
-							<input type="text" maxlength="11" placeholder="您的称呼"/>
+							<input id="name" type="text" maxlength="11" placeholder="您的称呼"/>
 							<div class="house_banner_icons"><img src="../images/house_icons3.png" alt="icon" /></div>
-							<input type="text" maxlength="11" placeholder="手机号码"/>
+							<input id="phone" type="text" maxlength="11" placeholder="手机号码"/>
 							<div class="house_banner_icons"><img src="../images/house_icons4.png" alt="icon" /></div>
-							<input type="text" maxlength="5" placeholder="面积"/>
-							<a href="../html/null.html">立即预约设计</a>
+							<input id="area" type="text" maxlength="5" placeholder="面积"/>
+							<div class="message"></div>
+							<a id='yuyue' href="#">立即预约设计</a>
 						</div>
 					</div>
 				</div>
 			</div>
 		<main>
-			
+
 			<!--服务流程-->
 			<div class="fwlc_main">
 				<div class="fwlc_cont">
@@ -56,7 +57,7 @@
 					</ul>
 				</div>
 			</div>
-			
+
 			<!--专业量房五大功效-->
 			<div class="majorLf_main">
 				<div class="majorLf_content">
@@ -85,7 +86,7 @@
 					</div>
 				</div>
 			</div>
-			
+
 			<!--e键美家量房工艺-->
 			<div class="craftLf_main">
 				<div class="craftLf_content">
@@ -99,7 +100,7 @@
 					</div>
 				</div>
 			</div>
-			
+
 			<!--免费设计平面图-->
 			<div class="flatLf_main">
 				<div class="flatLf_content">
@@ -113,7 +114,7 @@
 					</div>
 				</div>
 			</div>
-			
+
 			<!--规范工地展示-->
 			<div class="showLf_main">
 				<div class="showLf_content">
@@ -124,11 +125,12 @@
 				</div>
 			</div>
 		</main>
-		
+
 		<footer>
 			<script type="text/javascript" src="../js/footer.js" ></script>
 		</footer>
-		
+		<script src="/mobile/dist/commons.js" charset="utf-8"></script>
+    <script src="/mobile/dist/liangfang.js" charset="utf-8"></script>
 		<script type="text/javascript">
 			$(document).ready(function(){
 				$(".nav .nav_a a:eq(2)").css("color","#FFC61E");

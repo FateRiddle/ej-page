@@ -16,4 +16,16 @@ app.get('/mobile', (req,res) => {
   res.sendFile(path.resolve(__dirname, '..', 'public', 'index.html'));
 })
 
+app.use('/api',require('./router'))
+
+app.get('/houtai', (req, res) => {
+
+  res.sendFile(path.resolve(__dirname, '..', 'public','houtai','index.html'));
+});
+
+app.get('/houtai/*', (req, res) => {
+
+  res.sendFile(path.resolve(__dirname, '..', 'public','houtai','index.html'));
+});
+
 module.exports = app;
